@@ -3,13 +3,13 @@ body {
   font-family: Arial, sans-serif;
   color: white;
 
-  /* ANIMATED BACKGROUND */
-  background: linear-gradient(135deg, #000000, #1a0000, #000000);
+  /* SUBTLE ANIMATED BACKGROUND (FULL PAGE) */
+  background: linear-gradient(135deg, #000000, #120000, #000000);
   background-size: 300% 300%;
-  animation: bgShift 8s ease infinite;
+  animation: bgShift 15s ease infinite;
 }
 
-/* BACKGROUND ANIMATION */
+/* SMOOTH BACKGROUND MOVEMENT */
 @keyframes bgShift {
   0% {
     background-position: 0% 50%;
@@ -22,30 +22,30 @@ body {
   }
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
   text-align: center;
   padding: 120px 20px;
 
-  /* ANIMATED RED/BLACK HERO */
-  background: linear-gradient(135deg, #000000, #2a0000, #ff0000);
+  /* slightly stronger but still smooth */
+  background: linear-gradient(135deg, #000000, #200000, #3a0000);
   background-size: 300% 300%;
-  animation: bgShift 10s ease infinite;
+  animation: bgShift 18s ease infinite;
 
   border-bottom: 2px solid red;
   position: relative;
   overflow: hidden;
 }
 
-/* HERO GLOW EFFECT */
+/* HERO GLOW */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top, rgba(255, 0, 0, 0.25), transparent 60%);
+  background: radial-gradient(circle at top, rgba(255, 0, 0, 0.18), transparent 60%);
 }
 
-/* KEEP TEXT ABOVE EFFECTS */
+/* TEXT ABOVE EFFECTS */
 .hero * {
   position: relative;
   z-index: 1;
@@ -57,7 +57,7 @@ body {
   color: red;
   letter-spacing: 5px;
   margin: 0;
-  text-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
 
 /* TAGLINE */
@@ -67,7 +67,7 @@ body {
   margin-top: 10px;
 }
 
-/* STATS BAR */
+/* STATS */
 .stats {
   margin: 20px auto;
   display: flex;
@@ -110,7 +110,7 @@ body {
   color: red;
 }
 
-/* ROSTER GRID */
+/* GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -119,7 +119,7 @@ body {
   margin: auto;
 }
 
-/* PLAYER CARDS */
+/* CARDS */
 .card {
   background: #111;
   border: 1px solid red;
@@ -130,15 +130,15 @@ body {
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.25);
 }
 
-/* OWNER HIGHLIGHT */
+/* OWNER */
 .owner {
   border: 2px solid gold;
 }
 
-/* RECRUITING SECTION */
+/* RECRUITING */
 .recruiting {
   background: #0f0f0f;
   padding: 60px 20px;
