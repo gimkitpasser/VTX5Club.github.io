@@ -1,1 +1,31 @@
 
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0a0a0f;
+  color: white;
+  text-align: center;
+}
+
+header {
+  padding: 100px 20px;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+p {
+  opacity: 0.7;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #00aaff;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+}
