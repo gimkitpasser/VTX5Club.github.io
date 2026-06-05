@@ -9,18 +9,37 @@ body {
 .hero {
   text-align: center;
   padding: 120px 20px;
-  background: linear-gradient(180deg, #120000, #000);
+  background: linear-gradient(180deg, #1a0000, #000);
   border-bottom: 2px solid red;
 }
 
 .hero h1 {
-  font-size: 60px;
+  font-size: 64px;
   color: red;
-  letter-spacing: 4px;
+  letter-spacing: 5px;
 }
 
-.hero p {
+.tagline {
   opacity: 0.7;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* STATS */
+.stats {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  opacity: 0.9;
+}
+
+.stats div {
+  border: 1px solid red;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background: #111;
 }
 
 /* BUTTON */
@@ -48,23 +67,27 @@ body {
 
 .section h2 {
   color: red;
-  margin-bottom: 20px;
 }
 
-/* GRID ROSTER */
+/* ROSTER GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 15px;
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
 }
 
+/* CARDS */
 .card {
   background: #111;
   border: 1px solid red;
   padding: 20px;
   border-radius: 10px;
+}
+
+.owner {
+  border: 2px solid gold;
 }
 
 /* RECRUITING */
@@ -73,10 +96,6 @@ body {
   padding: 60px 20px;
   text-align: center;
   border-top: 2px solid red;
-}
-
-.recruiting h2 {
-  color: red;
 }
 
 .recruiting ul {
@@ -90,8 +109,9 @@ body {
 }
 
 /* FOOTER */
-footer 
+footer {
   text-align: center;
   padding: 20px;
   opacity: 0.5;
   border-top: 1px solid #222;
+}
