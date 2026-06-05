@@ -5,28 +5,28 @@ body {
   color: white;
 }
 
-/* HERO WITH IMAGE BACKGROUND */
+/* HERO SECTION */
 .hero {
   text-align: center;
   padding: 120px 20px;
 
-  /* YOUR IMAGE BACKGROUND */
-  background: url("images/bg.jpg") center/cover no-repeat;
+  /* RED + BLACK ESPORTS GRADIENT */
+  background: linear-gradient(135deg, #000000, #1a0000, #3b0000, #ff0000);
 
   border-bottom: 2px solid red;
   position: relative;
   overflow: hidden;
 }
 
-/* DARK OVERLAY (so text is readable) */
+/* LIGHT GLOW OVERLAY */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
+  background: radial-gradient(circle at top, rgba(255, 0, 0, 0.25), transparent 60%);
 }
 
-/* KEEP TEXT ABOVE OVERLAY */
+/* KEEP CONTENT ABOVE OVERLAY */
 .hero * {
   position: relative;
   z-index: 1;
@@ -38,6 +38,7 @@ body {
   color: red;
   letter-spacing: 5px;
   margin: 0;
+  text-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
 }
 
 /* TAGLINE */
@@ -105,6 +106,11 @@ body {
   border: 1px solid red;
   padding: 20px;
   border-radius: 10px;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 /* OWNER HIGHLIGHT */
