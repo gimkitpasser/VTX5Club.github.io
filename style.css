@@ -1,23 +1,25 @@
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: white;
 
-  /* FULL PAGE PULSING BACKGROUND */
-  background: #000000;
-  animation: pulseBG 1s infinite;
+  /* SUBTLE ANIMATED BACKGROUND (FULL PAGE) */
+  background: linear-gradient(135deg, #000000, #120000, #000000);
+  background-size: 300% 300%;
+  animation: bgShift 15s ease infinite;
 }
 
-/* FAST RED/BLACK PULSE */
-@keyframes pulseBG {
+/* SMOOTH BACKGROUND MOVEMENT */
+@keyframes bgShift {
   0% {
-    background-color: #000000;
+    background-position: 0% 50%;
   }
   50% {
-    background-color: #8b0000;
+    background-position: 100% 50%;
   }
   100% {
-    background-color: #000000;
+    background-position: 0% 50%;
   }
 }
 
@@ -26,7 +28,10 @@ body {
   text-align: center;
   padding: 120px 20px;
 
+  /* slightly stronger but still smooth */
   background: linear-gradient(135deg, #000000, #200000, #3a0000);
+  background-size: 300% 300%;
+  animation: bgShift 18s ease infinite;
 
   border-bottom: 2px solid red;
   position: relative;
@@ -94,7 +99,6 @@ body {
 
 .btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
 }
 
 /* SECTIONS */
@@ -105,7 +109,6 @@ body {
 
 .section h2 {
   color: red;
-  text-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
 }
 
 /* GRID */
@@ -138,7 +141,7 @@ body {
 
 /* RECRUITING */
 .recruiting {
-  background: rgba(15, 15, 15, 0.9);
+  background: #0f0f0f;
   padding: 60px 20px;
   text-align: center;
   border-top: 2px solid red;
