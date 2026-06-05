@@ -2,16 +2,19 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: white;
+
+  /* FULL PAGE PULSING BACKGROUND */
   background: #000000;
-  animation: pulseBG 0.8s infinite;
+  animation: pulseBG 1s infinite;
 }
 
+/* FAST RED/BLACK PULSE */
 @keyframes pulseBG {
   0% {
     background-color: #000000;
   }
   50% {
-    background-color: #b30000;
+    background-color: #8b0000;
   }
   100% {
     background-color: #000000;
@@ -22,7 +25,9 @@ body {
 .hero {
   text-align: center;
   padding: 120px 20px;
-  background: transparent;
+
+  background: linear-gradient(135deg, #000000, #200000, #3a0000);
+
   border-bottom: 2px solid red;
   position: relative;
   overflow: hidden;
@@ -33,7 +38,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top, rgba(255, 0, 0, 0.25), transparent 60%);
+  background: radial-gradient(circle at top, rgba(255, 0, 0, 0.18), transparent 60%);
 }
 
 /* TEXT ABOVE EFFECTS */
@@ -71,7 +76,7 @@ body {
   border: 1px solid red;
   padding: 10px 15px;
   border-radius: 8px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 /* BUTTON */
@@ -100,6 +105,7 @@ body {
 
 .section h2 {
   color: red;
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
 }
 
 /* GRID */
@@ -113,7 +119,7 @@ body {
 
 /* CARDS */
 .card {
-  background: rgba(17, 17, 17, 0.75);
+  background: #111;
   border: 1px solid red;
   padding: 20px;
   border-radius: 10px;
@@ -132,7 +138,7 @@ body {
 
 /* RECRUITING */
 .recruiting {
-  background: transparent;
+  background: rgba(15, 15, 15, 0.9);
   padding: 60px 20px;
   text-align: center;
   border-top: 2px solid red;
