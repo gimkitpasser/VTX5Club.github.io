@@ -1,8 +1,25 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #0a0a0a;
   color: white;
+
+  /* ANIMATED BACKGROUND */
+  background: linear-gradient(135deg, #000000, #1a0000, #000000);
+  background-size: 300% 300%;
+  animation: bgShift 8s ease infinite;
+}
+
+/* BACKGROUND ANIMATION */
+@keyframes bgShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* HERO SECTION */
@@ -10,15 +27,17 @@ body {
   text-align: center;
   padding: 120px 20px;
 
-  /* RED + BLACK ESPORTS GRADIENT */
-  background: linear-gradient(135deg, #000000, #1a0000, #3b0000, #ff0000);
+  /* ANIMATED RED/BLACK HERO */
+  background: linear-gradient(135deg, #000000, #2a0000, #ff0000);
+  background-size: 300% 300%;
+  animation: bgShift 10s ease infinite;
 
   border-bottom: 2px solid red;
   position: relative;
   overflow: hidden;
 }
 
-/* LIGHT GLOW OVERLAY */
+/* HERO GLOW EFFECT */
 .hero::before {
   content: "";
   position: absolute;
@@ -26,7 +45,7 @@ body {
   background: radial-gradient(circle at top, rgba(255, 0, 0, 0.25), transparent 60%);
 }
 
-/* KEEP CONTENT ABOVE OVERLAY */
+/* KEEP TEXT ABOVE EFFECTS */
 .hero * {
   position: relative;
   z-index: 1;
@@ -111,6 +130,7 @@ body {
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
 }
 
 /* OWNER HIGHLIGHT */
