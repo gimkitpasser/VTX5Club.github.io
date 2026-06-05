@@ -5,44 +5,62 @@ body {
   color: white;
 }
 
+/* HERO WITH IMAGE BACKGROUND */
 .hero {
   text-align: center;
   padding: 120px 20px;
 
+  /* YOUR IMAGE BACKGROUND */
   background: url("images/bg.jpg") center/cover no-repeat;
 
   border-bottom: 2px solid red;
   position: relative;
+  overflow: hidden;
 }
 
+/* DARK OVERLAY (so text is readable) */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
 
+/* KEEP TEXT ABOVE OVERLAY */
+.hero * {
+  position: relative;
+  z-index: 1;
+}
+
+/* TITLE */
 .hero h1 {
   font-size: 64px;
   color: red;
   letter-spacing: 5px;
+  margin: 0;
 }
 
+/* TAGLINE */
 .tagline {
-  opacity: 0.7;
+  opacity: 0.8;
   font-size: 18px;
-  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
-/* STATS */
+/* STATS BAR */
 .stats {
   margin: 20px auto;
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
-  opacity: 0.9;
 }
 
 .stats div {
   border: 1px solid red;
   padding: 10px 15px;
   border-radius: 8px;
-  background: #111;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 /* BUTTON */
@@ -81,7 +99,7 @@ body {
   margin: auto;
 }
 
-/* CARDS */
+/* PLAYER CARDS */
 .card {
   background: #111;
   border: 1px solid red;
@@ -89,11 +107,12 @@ body {
   border-radius: 10px;
 }
 
+/* OWNER HIGHLIGHT */
 .owner {
   border: 2px solid gold;
 }
 
-/* RECRUITING */
+/* RECRUITING SECTION */
 .recruiting {
   background: #0f0f0f;
   padding: 60px 20px;
