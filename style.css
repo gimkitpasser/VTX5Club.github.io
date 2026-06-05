@@ -3,22 +3,19 @@ body {
   font-family: Arial, sans-serif;
   color: white;
 
-  /* SUBTLE ANIMATED BACKGROUND (FULL PAGE) */
-  background: linear-gradient(135deg, #000000, #120000, #000000);
-  background-size: 300% 300%;
-  animation: bgShift 15s ease infinite;
+  /* FAST RED/BLACK PULSE */
+  animation: pulseBG 1s infinite;
 }
 
-/* SMOOTH BACKGROUND MOVEMENT */
-@keyframes bgShift {
+@keyframes pulseBG {
   0% {
-    background-position: 0% 50%;
+    background: #000000;
   }
   50% {
-    background-position: 100% 50%;
+    background: #8b0000;
   }
   100% {
-    background-position: 0% 50%;
+    background: #000000;
   }
 }
 
@@ -27,139 +24,9 @@ body {
   text-align: center;
   padding: 120px 20px;
 
-  /* slightly stronger but still smooth */
-  background: linear-gradient(135deg, #000000, #200000, #3a0000);
-  background-size: 300% 300%;
-  animation: bgShift 18s ease infinite;
+  background: #000000;
 
   border-bottom: 2px solid red;
   position: relative;
   overflow: hidden;
-}
-
-/* HERO GLOW */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at top, rgba(255, 0, 0, 0.18), transparent 60%);
-}
-
-/* TEXT ABOVE EFFECTS */
-.hero * {
-  position: relative;
-  z-index: 1;
-}
-
-/* TITLE */
-.hero h1 {
-  font-size: 64px;
-  color: red;
-  letter-spacing: 5px;
-  margin: 0;
-  text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-}
-
-/* TAGLINE */
-.tagline {
-  opacity: 0.8;
-  font-size: 18px;
-  margin-top: 10px;
-}
-
-/* STATS */
-.stats {
-  margin: 20px auto;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.stats div {
-  border: 1px solid red;
-  padding: 10px 15px;
-  border-radius: 8px;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  background: red;
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: 0.2s;
-}
-
-.btn:hover {
-  transform: scale(1.05);
-}
-
-/* SECTIONS */
-.section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.section h2 {
-  color: red;
-}
-
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-  max-width: 900px;
-  margin: auto;
-}
-
-/* CARDS */
-.card {
-  background: #111;
-  border: 1px solid red;
-  padding: 20px;
-  border-radius: 10px;
-  transition: 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.25);
-}
-
-/* OWNER */
-.owner {
-  border: 2px solid gold;
-}
-
-/* RECRUITING */
-.recruiting {
-  background: #0f0f0f;
-  padding: 60px 20px;
-  text-align: center;
-  border-top: 2px solid red;
-}
-
-.recruiting ul {
-  list-style: none;
-  padding: 0;
-  opacity: 0.8;
-}
-
-.recruiting li {
-  margin: 8px 0;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  opacity: 0.5;
-  border-top: 1px solid #222;
 }
