@@ -2,20 +2,19 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: white;
-
-  /* FAST RED/BLACK PULSE */
-  animation: pulseBG 1s infinite;
+  background: #000000;
+  animation: pulseBG 0.8s infinite;
 }
 
 @keyframes pulseBG {
   0% {
-    background: #000000;
+    background-color: #000000;
   }
   50% {
-    background: #8b0000;
+    background-color: #b30000;
   }
   100% {
-    background: #000000;
+    background-color: #000000;
   }
 }
 
@@ -23,10 +22,136 @@ body {
 .hero {
   text-align: center;
   padding: 120px 20px;
-
-  background: #000000;
-
+  background: transparent;
   border-bottom: 2px solid red;
   position: relative;
   overflow: hidden;
+}
+
+/* HERO GLOW */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(255, 0, 0, 0.25), transparent 60%);
+}
+
+/* TEXT ABOVE EFFECTS */
+.hero * {
+  position: relative;
+  z-index: 1;
+}
+
+/* TITLE */
+.hero h1 {
+  font-size: 64px;
+  color: red;
+  letter-spacing: 5px;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+/* TAGLINE */
+.tagline {
+  opacity: 0.8;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* STATS */
+.stats {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stats div {
+  border: 1px solid red;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: red;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+}
+
+/* SECTIONS */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  color: red;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* CARDS */
+.card {
+  background: rgba(17, 17, 17, 0.75);
+  border: 1px solid red;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.25);
+}
+
+/* OWNER */
+.owner {
+  border: 2px solid gold;
+}
+
+/* RECRUITING */
+.recruiting {
+  background: transparent;
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 2px solid red;
+}
+
+.recruiting ul {
+  list-style: none;
+  padding: 0;
+  opacity: 0.8;
+}
+
+.recruiting li {
+  margin: 8px 0;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.5;
+  border-top: 1px solid #222;
 }
