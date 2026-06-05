@@ -5,13 +5,16 @@ body {
   color: white;
 }
 
-/* HERO */
 .hero {
   text-align: center;
   padding: 120px 20px;
-  background: linear-gradient(180deg, #1a0000, #000);
+
+  background: url("images/bg.jpg") center/cover no-repeat;
+
   border-bottom: 2px solid red;
+  position: relative;
 }
+
 
 .hero h1 {
   font-size: 64px;
